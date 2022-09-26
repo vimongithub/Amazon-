@@ -5,8 +5,8 @@ from smtplib import *
 AMAZON_URL ="https://www.amazon.in/Apple-iPhone-13-Mini-128GB/dp/B09G9FNN4X/ref=sr_1_3?crid=3GINNZQUAXPTO&keywords=iphone+13+mini&qid=1657861151&sprefix=iphone+13+m%2Caps%2C914&sr=8-3"
 BUYING_PRICE = 60000
 
-my_email = "pathakvimal1991@hotmail.com"
-password = "PythonVimalOutlook@321"
+my_email = "email"
+password = "password"
 
 header={
     "Accept-Language": "en-US,en;q=0.9,gu;q=0.8,hi;q=0.7",
@@ -28,7 +28,7 @@ if amazon_product_price < BUYING_PRICE:
     connection.starttls()
     connection.login(user=my_email, password=password)
     connection.sendmail(from_addr=my_email,
-                        to_addrs="pathakvimal007@gmail.com",
+                        to_addrs="user_email",
                         msg=f"Subject:Price drop Alert!\n\n Iphone 13 mini getting at {amazon_product_price},"
                             f"URL: {AMAZON_URL}")
     connection.close()
